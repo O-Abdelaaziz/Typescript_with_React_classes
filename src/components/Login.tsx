@@ -34,12 +34,14 @@ export class Login extends React.Component<LoginProps,LoginState>{
 
     private async handelSubmit(event:SyntheticEvent){
         event.preventDefault();
+        this.setState({loginAttenpted:true});
         const result=await this.props.authService.login(
             this.state.userName,
             this.state.password
         )
 
         if(result){
+            this.setState({loginSuccessfull:true});
             console.log(result);
         }else{
             console.log('no result found');
@@ -48,6 +50,15 @@ export class Login extends React.Component<LoginProps,LoginState>{
     }
 
     render(){
+
+        let loginMessage:any;
+        if(this.state.loginAttenpted){
+            if(this.state.loginSuccessfull){
+                loginMessage=<label>login success</label>
+            }else{    
+                loginMessage=<label>login field</label>
+            }
+        }
         return(
             <div> 
                 <h2>Please Login !!</h2>
