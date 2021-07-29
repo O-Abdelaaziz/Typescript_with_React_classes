@@ -1,10 +1,10 @@
 import { User } from "../models/Model";
 
 export class AuthService{
-    public async login(username:string,password:string):Promise<User|undefined>{
-        if(username==='abdelaaziz' && password==='123456'){
+    public async login(userName:string,password:string):Promise<User|undefined>{
+        if(userName==='abdelaaziz' && password==='123456'){
             return{
-                userName:username,
+                userName:userName,
                 email:'abdelaaziz@gmail.com'
             }
         }else{
