@@ -1,7 +1,7 @@
 import React, { SyntheticEvent } from "react";
 import { User } from "../models/Model";
 import { AuthService } from "../services/AuthService";
-
+import  history from "../utils/hostory";
 interface LoginProps{
     authService:AuthService,
     setUser:(user:User)=>void
@@ -45,6 +45,7 @@ export class Login extends React.Component<LoginProps,LoginState>{
         if(result){
             this.setState({loginSuccessfull:true});
             this.props.setUser(result);
+            history.push('/profile');
             console.log(result);
         }else{
             console.log('no result found');
