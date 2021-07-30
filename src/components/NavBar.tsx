@@ -17,6 +17,7 @@ export class NavBar extends React.Component<{user:User|undefined},{}>{
                 
                 <Link to='/'>Home</Link>
                 <Link to='/profile'>Profile</Link>
+                <Link to='/spaces'> Spaces</Link>
                 {loginLogOut}
             </div>
         );

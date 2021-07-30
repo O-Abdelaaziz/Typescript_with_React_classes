@@ -1,6 +1,6 @@
 import { Component } from "react";
 import { Space } from "../../models/Model";
-import { DataService } from "../../services/DataService ";
+import { DataService } from "../../services/DataService";
 import { SpaceComponent } from "./SpaceComponent";
 
 interface  SpacesProps{
@@ -36,11 +36,12 @@ export class Spaces extends Component<SpacesProps, SpacesState>{
                 <SpaceComponent
                     location={space.location}
                     name={space.name}
-                    id={space.spaceId}
+                    id={space.id}
                     reserveSpace={this.reserveSpace}
                 />
             )
         }
+        return rows;
     }
 
     render() {

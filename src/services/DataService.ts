@@ -1,4 +1,4 @@
-import { Space } from './../models/Model';
+import { Space } from '../models/Model';
 export class DataService {
 
     public async getSpaces(): Promise<Space[]> {
@@ -6,17 +6,17 @@ export class DataService {
         result.push({
             location: 'Paris',
             name: 'Best Location',
-            spaceId: '123'
+            id: '123'
         });
         result.push({
             location: 'Paris',
             name: 'Best Location',
-            spaceId: '124'
+            id: '124'
         });
         result.push({
             location: 'Paris',
             name: 'Best Location',
-            spaceId: '125'
+            id: '125'
         });
         return result;
     }
